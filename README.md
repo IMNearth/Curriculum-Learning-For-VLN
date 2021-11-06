@@ -1,4 +1,4 @@
-# Curriculum-Learning For Vision-and-Language Navigation
+# Curriculum Learning For LVN
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 This is the PyTorch implementation of our paper:<br>
@@ -8,3 +8,4 @@ This is the PyTorch implementation of our paper:<br>
 
 ## 2021-11-06
 We uploaded the CLR2R dataset mentioned in our paper. 
+
