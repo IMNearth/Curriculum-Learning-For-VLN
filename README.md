@@ -10,8 +10,9 @@ This is the PyTorch implementation of our paper:<br>
 
 ## Most Recent Events
 
-* 2021-11-06: We uploaded the CLR2R dataset mentioned in our paper. (<code>tasks/R2R-judy/data</code>) 
+* 2021-11-14: We update package of agents and methods. (<code>tasks/R2R-judy/src</code>) 
 * 2021-11-08: We update the installation instructions.
+* 2021-11-06: We uploaded the CLR2R dataset mentioned in our paper. (<code>tasks/R2R-judy/data</code>) 
 
 
 
@@ -73,15 +74,15 @@ After following the steps above the your file directory should look like this:
 
 ```shell
 Matterport3D/
-	build/					  # should be complied in your machine
-	cmake/
-	connectivity/		  # store Json connecivity graphs for each scan
-	img_features/		  # store precomputed image features, i.e. ResNet-152 features
-	include/
-	pybind11/         # a dependency of Matterport3D Simulator
-	...
-	tasks/R2R-judy/	  # replace it with the one in this directory
-	...
+    build/            # should be complied in your machine
+    cmake/
+    connectivity/     # store Json connecivity graphs for each scan
+    img_features/     # store precomputed image features, i.e. ResNet-152 features
+    include/
+    pybind11/         # a dependency of Matterport3D Simulator
+    ...
+    tasks/R2R-judy/   # replace it with the one in this directory
+    ...
 ```
 
 
