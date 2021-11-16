@@ -10,6 +10,7 @@ This is the PyTorch implementation of our paper:<br>
 
 ## Most Recent Events
 
+* 2021-11-16: We have our paper arxived, now you can acess it by clicking [here](https://arxiv.org/abs/2111.07228) !
 * 2021-11-14: We update package of agents and methods. (<code>tasks/R2R-judy/src</code>) 
 * 2021-11-08: We update the installation instructions.
 * 2021-11-06: We uploaded the CLR2R dataset mentioned in our paper. (<code>tasks/R2R-judy/data</code>) 
