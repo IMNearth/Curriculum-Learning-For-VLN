@@ -4,7 +4,7 @@
 This is the PyTorch implementation of our paper:<br>
 **Curriculum Learning for Vision-and-Language Navigation**<br>
 *Jiwen Zhang, [Zhongyu Wei](http://www.sdspeople.fudan.edu.cn/zywei/), [Jianqing Fan](https://fan.princeton.edu/), [Jiajie Peng](https://jiajiepeng.github.io/)*<br>
-34th Conference on Neural Information Processing Systems (NeurIPS 2021)
+35th Conference on Neural Information Processing Systems (NeurIPS 2021)
 
 
 
