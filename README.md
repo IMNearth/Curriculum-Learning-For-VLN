@@ -10,6 +10,7 @@ This is the PyTorch implementation of our paper:<br>
 
 ## Most Recent Events
 
+* 2021-12-27: We upload the <code>tasks/R2R-judy/main.py</code> and training instructions.
 * 2021-11-16: We have our paper arxived, now you can acess it by clicking [here](https://arxiv.org/abs/2111.07228) !
 * 2021-11-14: We update package of agents and methods. (<code>tasks/R2R-judy/src</code>) 
 * 2021-11-08: We update the installation instructions.
@@ -92,7 +93,18 @@ Matterport3D/
 
 ## Usage Instructions
 
+To replicate the Table 3 in our paper, try the following command.
 
+```bash
+CONFIG_PATH = "path-to-config-file"
+CL_MODE = "" # "" / "NAIVE" / "SELF-PACE"
 
+python tasks/R2R-judy/main.py \
+--config-file CONFIG_PATH \
+TRAIN.DEVICE your_device_id \
+TRAIN.CLMODE CL_MODE \
+...
+```
 
+You can refer to <code>task/tasks/R2R-judy/runner</code> for more details.
 

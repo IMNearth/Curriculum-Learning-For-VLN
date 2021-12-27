@@ -1,0 +1,48 @@
+DATA:
+  NAME: "R2R"
+  DATA_DIR: "tasks/R2R-judy/data"
+  TRAIN_VOCAB: "tasks/R2R-judy/data/train_vocab.txt"
+  TRAINVAL_VOCAB: "tasks/R2R-judy/data/trainval_vocab.txt"
+  IMG_FEAT_DIR: "img_features/ResNet-152-imagenet.tsv"
+  MAX_ENC_LEN: 80
+
+OUTPUT:
+  RESUME: ""
+  CKPT_DIR: "tasks/R2R-judy/snapshots/checkpoints/envdrop"
+  LOG_DIR: "tasks/R2R-judy/snapshots/logs"
+  RESULT_DIR: "tasks/R2R-judy/snapshots/trajs"
+  TSBOARD_DIR: "tasks/R2R-judy/snapshots/tensorboard/envdrop"
+
+TRAIN: 
+  DEVICE: 0
+  OPTIM: "rms"
+  LR: 0.0001
+  BATCH_SIZE: 64
+  START_EPOCH: 1
+  MAX_EPOCH: 200
+  ITER_PER_EPOCH: 200
+  EVAL_INTERVAL: 2
+  PATIENCE: 3
+  LR_MIN: 1e-6
+  DATA_ARGUMENT: False
+
+AGENT:
+  TEACHER_FORCE: False
+  MAX_EPISODE_LEN: 35
+  FEEDBACK: "sample"
+
+MODEL:
+  NAME: "ENVDROP"
+
+  ENVDROP:
+    WORD_EMB_SIZE: 256
+    ACT_EMB_SIZE: 64
+    HIDDEN_SIZE: 512
+    DROP_RATE: 0.5
+    FEAT_DROP_RATE: 0.3
+    ENC_BIDIRECTION: True
+    ENC_LAYERS: 1
+    ML_WEIGHT: 0.2
+    GAMMA: 0.9
+    RL_NORMALIZE: "total"
+

@@ -1,0 +1,46 @@
+DATA:
+  NAME: "R2R"
+  DATA_DIR: "tasks/R2R-judy/data"
+  TRAIN_VOCAB: "tasks/R2R-judy/data/train_vocab.txt"
+  TRAINVAL_VOCAB: "tasks/R2R-judy/data/trainval_vocab.txt"
+  IMG_FEAT_DIR: "img_features/ResNet-152-imagenet.tsv"
+  MAX_ENC_LEN: 80
+
+OUTPUT:
+  RESUME: ""
+  CKPT_DIR: "tasks/R2R-judy/snapshots/checkpoints/self-monitor/normal"
+  LOG_DIR: "tasks/R2R-judy/snapshots/logs"
+  RESULT_DIR: "tasks/R2R-judy/snapshots/trajs"
+  TSBOARD_DIR: "tasks/R2R-judy/snapshots/tensorboard/self-monitor"
+
+TRAIN: 
+  DEVICE: 1
+  OPTIM: "adam"
+  LR: 0.0001
+  BATCH_SIZE: 64
+  START_EPOCH: 1
+  MAX_EPOCH: 200
+  ITER_PER_EPOCH: 200
+  EVAL_INTERVAL: 2
+  SCHEDULER: ''
+  PATIENCE: 3
+  LR_MIN: 1e-6
+  DATA_ARGUMENT: False
+  PROGMONITOR_WEIGHT: 0.5
+
+AGENT:
+  TEACHER_FORCE: False
+  MAX_EPISODE_LEN: 10
+  FEEDBACK: "sample"
+
+MODEL:
+  NAME: "SELF-MONITOR"
+
+  MONITOR:
+    WORD_EMB_SIZE: 256
+    HIDDEN_SIZE: 512
+    DROP_RATE: 0.5
+    ENC_BIDIRECTION: False
+    ENC_LAYERS: 1
+    MLP_HIDDEN: (1024, )
+
