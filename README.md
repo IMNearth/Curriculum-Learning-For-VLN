@@ -93,16 +93,16 @@ Matterport3D/
 
 ## Usage Instructions
 
-To replicate the Table 3 in our paper, try the following command.
+To replicate the Table 3 in our paper, try the following command in shell.
 
 ```bash
-CONFIG_PATH = "path-to-config-file"
-CL_MODE = "" # "" / "NAIVE" / "SELF-PACE"
+CONFIG_PATH="path-to-config-file"
+CL_MODE="" # "" / "NAIVE" / "SELF-PACE"
 
 python tasks/R2R-judy/main.py \
---config-file CONFIG_PATH \
+--config-file $CONFIG_PATH \
 TRAIN.DEVICE your_device_id \
-TRAIN.CLMODE CL_MODE \
+TRAIN.CLMODE $CL_MODE \
 ...
 ```
 
